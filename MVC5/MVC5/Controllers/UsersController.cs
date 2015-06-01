@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVC5.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,9 +14,16 @@ namespace MVC5.Controllers
         {
             return View();
         }
+        [HttpGet]
         public ActionResult CreateUser()
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult CreateUser(User x)
+        {
+            return Content("Hiii" +x.username);
+        }
+
     }
 }
